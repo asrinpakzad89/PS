@@ -1,0 +1,397 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\assetaggregate\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\assetaggregate\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\assetaggregate\\assetrelocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\assetaggregate\\assetrelocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\assetaggregate\\assetfiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\assetaggregate\\assetfiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\assetaggregate\\assetdimension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\assetaggregate\\assetdimension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\assetaggregate\\assetidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\assetaggregate\\assetidentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\assetaggregate\\assetstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\assetaggregate\\assetstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\enums\\assetstatustypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\enums\\assetstatustypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\assetaggregate\\assettools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\assetaggregate\\assettools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\locationaggregate\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\locationaggregate\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\assetcodingaggregate\\assertcoding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\assetcodingaggregate\\assertcoding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\manufactureraggregate\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\manufactureraggregate\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\assetgroupaggregate\\assetgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\assetgroupaggregate\\assetgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\assetcategoryaggregate\\assetcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\assetcategoryaggregate\\assetcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\enums\\shapeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\enums\\shapeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\enums\\importancelevelenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\enums\\importancelevelenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\dimensionaggregate\\dimension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\dimensionaggregate\\dimension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\levelaggregate\\assettreestructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\levelaggregate\\assettreestructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\assetcodingaggregate\\installedassetcoding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\assetcodingaggregate\\installedassetcoding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\aggregatesmodel\\levelaggregate\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\aggregatesmodel\\levelaggregate\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|c:\\users\\zagros\\desktop\\project\\cmmsapp\\cmmsapp\\src\\cmmsapp.domain\\enums\\materialtypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF693-EF2E-4F60-86AC-7DF1C4C5EBFA}|src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj|solutionrelative:src\\cmmsapp.domain\\enums\\materialtypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 23,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AssetTools.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetTools.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetTools.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetTools.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetTools.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T10:21:16.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AssetStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetStatus.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetStatus.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetStatus.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetStatus.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAewCkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T10:20:41.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AssetFiles.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetFiles.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetFiles.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetFiles.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetFiles.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAywBAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T10:01:30.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AssetStatusTypeEnum.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\Enums\\AssetStatusTypeEnum.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\Enums\\AssetStatusTypeEnum.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\Enums\\AssetStatusTypeEnum.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\Enums\\AssetStatusTypeEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T09:49:16.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AssetGroup.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetGroupAggregate\\AssetGroup.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetGroupAggregate\\AssetGroup.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetGroupAggregate\\AssetGroup.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetGroupAggregate\\AssetGroup.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T09:31:38.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AssetCategory.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetCategoryAggregate\\AssetCategory.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetCategoryAggregate\\AssetCategory.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetCategoryAggregate\\AssetCategory.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetCategoryAggregate\\AssetCategory.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAiwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T09:31:09.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AssetDimension.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetDimension.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetDimension.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetDimension.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetDimension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T07:46:52.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Dimension.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\DimensionAggregate\\Dimension.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\DimensionAggregate\\Dimension.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\DimensionAggregate\\Dimension.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\DimensionAggregate\\Dimension.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAuwBkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T07:45:02.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ImportanceLevelEnum.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\Enums\\ImportanceLevelEnum.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\Enums\\ImportanceLevelEnum.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\Enums\\ImportanceLevelEnum.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\Enums\\ImportanceLevelEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T07:33:28.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ShapeEnum.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\Enums\\ShapeEnum.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\Enums\\ShapeEnum.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\Enums\\ShapeEnum.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\Enums\\ShapeEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T07:07:35.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MaterialTypeEnum.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\Enums\\MaterialTypeEnum.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\Enums\\MaterialTypeEnum.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\Enums\\MaterialTypeEnum.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\Enums\\MaterialTypeEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T06:52:58.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AssetIdentity.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetIdentity.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetIdentity.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetIdentity.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetIdentity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T06:51:21.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Manufacturer.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\ManufacturerAggregate\\Manufacturer.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\ManufacturerAggregate\\Manufacturer.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\ManufacturerAggregate\\Manufacturer.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\ManufacturerAggregate\\Manufacturer.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAmwAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T06:37:33.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AssetRelocation.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetRelocation.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetRelocation.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetRelocation.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\AssetRelocation.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAIwBcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T06:22:36.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AssetTreeStructure.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\LevelAggregate\\AssetTreeStructure.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\LevelAggregate\\AssetTreeStructure.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\LevelAggregate\\AssetTreeStructure.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\LevelAggregate\\AssetTreeStructure.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAwwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T06:18:41.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Level.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\LevelAggregate\\Level.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\LevelAggregate\\Level.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\LevelAggregate\\Level.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\LevelAggregate\\Level.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAQwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T06:11:23.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GlobalUsings.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\GlobalUsings.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\GlobalUsings.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\GlobalUsings.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\GlobalUsings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T04:49:01.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AssertCoding.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetCodingAggregate\\AssertCoding.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetCodingAggregate\\AssertCoding.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetCodingAggregate\\AssertCoding.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetCodingAggregate\\AssertCoding.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T04:47:59.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Asset.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\Asset.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\Asset.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\Asset.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetAggregate\\Asset.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAuwC4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T04:40:46.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "InstalledAssetCoding.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetCodingAggregate\\InstalledAssetCoding.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetCodingAggregate\\InstalledAssetCoding.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\AssetCodingAggregate\\InstalledAssetCoding.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\AssetCodingAggregate\\InstalledAssetCoding.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAmwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T04:36:54.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Location.cs",
+              "DocumentMoniker": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\LocationAggregate\\Location.cs",
+              "RelativeDocumentMoniker": "src\\CMMSAPP.Domain\\AggregatesModel\\LocationAggregate\\Location.cs",
+              "ToolTip": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\AggregatesModel\\LocationAggregate\\Location.cs",
+              "RelativeToolTip": "src\\CMMSAPP.Domain\\AggregatesModel\\LocationAggregate\\Location.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA2wBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T04:35:24.84Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

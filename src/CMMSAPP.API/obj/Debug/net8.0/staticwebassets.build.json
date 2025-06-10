@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "w5NX6x+bx9Tv4oSiMLJiMkNd4haEJX7KkLCV36gIBlU=",
+  "Source": "CMMSAPP.API",
+  "BasePath": "_content/CMMSAPP.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

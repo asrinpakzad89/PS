@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "CMMSAPP.API.Controllers.v1.AssetController",
+    "Method": "GetName",
+    "RelativePath": "api/v1/Asset",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "CMMSAPP.Common.Api.ApiResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

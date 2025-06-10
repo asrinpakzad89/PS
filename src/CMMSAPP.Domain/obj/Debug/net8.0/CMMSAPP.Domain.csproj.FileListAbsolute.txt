@@ -1,0 +1,11 @@
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net8.0\CMMSAPP.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net8.0\CMMSAPP.Domain.AssemblyInfoInputs.cache
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net8.0\CMMSAPP.Domain.AssemblyInfo.cs
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net8.0\CMMSAPP.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\bin\Debug\net8.0\CMMSAPP.Domain.deps.json
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\bin\Debug\net8.0\CMMSAPP.Domain.dll
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\bin\Debug\net8.0\CMMSAPP.Domain.pdb
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net8.0\CMMSAPP.Domain.dll
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net8.0\refint\CMMSAPP.Domain.dll
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net8.0\CMMSAPP.Domain.pdb
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net8.0\ref\CMMSAPP.Domain.dll

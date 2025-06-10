@@ -1,0 +1,11 @@
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\bin\Debug\net8.0\CMMSAPP.Infrastructure.deps.json
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\bin\Debug\net8.0\CMMSAPP.Infrastructure.dll
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\bin\Debug\net8.0\CMMSAPP.Infrastructure.pdb
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\obj\Debug\net8.0\CMMSAPP.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\obj\Debug\net8.0\CMMSAPP.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\obj\Debug\net8.0\CMMSAPP.Infrastructure.AssemblyInfo.cs
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\obj\Debug\net8.0\CMMSAPP.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\obj\Debug\net8.0\CMMSAPP.Infrastructure.dll
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\obj\Debug\net8.0\refint\CMMSAPP.Infrastructure.dll
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\obj\Debug\net8.0\CMMSAPP.Infrastructure.pdb
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\obj\Debug\net8.0\ref\CMMSAPP.Infrastructure.dll
