@@ -890,6 +890,9 @@
         }
       },
       "CMMSAPP.Domain/1.0.0": {
+        "dependencies": {
+          "CMMSAPP.Common": "1.0.0"
+        },
         "runtime": {
           "CMMSAPP.Domain.dll": {
             "assemblyVersion": "1.0.0.0",

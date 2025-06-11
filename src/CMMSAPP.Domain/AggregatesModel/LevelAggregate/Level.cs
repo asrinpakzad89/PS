@@ -4,22 +4,23 @@ public class Level : Entity, IAggregateRoot
 {
     public string Title { get; private set; }
     public string? Code { get; private set; }
-    public string? Description { get; private set; }
-    
+
     public Guid? ParentId { get; private set; }
     public Level? Parent { get; private set; }
 
     private readonly List<Level> _children = new();
     public IReadOnlyCollection<Level> Children => _children.AsReadOnly();
 
+    public string? Description { get; private set; }
 
     protected Level() { }
 
-    public Level(string title, string? code, string? description, Level? parent = null,  string? createdBy = null)
+    public Level(string title, string? code, string? description, Level? parent = null, string? createdBy = null)
     {
-        if (string.IsNullOrWhiteSpace(title))
-            throw new AssetDomainException("عنوان نمی‌تواند خالی باشد. لطفاً یک عنوان معتبر وارد کنید.");
+        if (!title.HasValue())
+            throw new AssetDomainException("عنوان نمی‌تواند خالی باشد.");
 
+        Id = Guid.NewGuid();
         Title = title;
         Code = code;
         Description = description;
@@ -56,7 +57,7 @@ public class Level : Entity, IAggregateRoot
     }
     public void Update(string newTitle, string? newCode, string? newDescription, string? modifiedBy = null)
     {
-        if (string.IsNullOrWhiteSpace(newTitle))
+        if (!newTitle.HasValue())
             throw new AssetDomainException("به‌روزرسانی ناموفق بود. عنوان نمی‌تواند خالی باشد.");
 
         Title = newTitle;

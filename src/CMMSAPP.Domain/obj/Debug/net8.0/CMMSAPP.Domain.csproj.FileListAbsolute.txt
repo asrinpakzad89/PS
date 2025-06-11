@@ -9,3 +9,8 @@ C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net8.0\refint\CMMSAPP.Domain.dll
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net8.0\CMMSAPP.Domain.pdb
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net8.0\ref\CMMSAPP.Domain.dll
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net8.0\CMMSAPP.Domain.sourcelink.json
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\bin\Debug\net8.0\CMMSAPP.Common.dll
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\bin\Debug\net8.0\CMMSAPP.Common.pdb
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net8.0\CMMSAPP.Domain.csproj.AssemblyReference.cache
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Domain\obj\Debug\net8.0\CMMSAPP..433ED891.Up2Date

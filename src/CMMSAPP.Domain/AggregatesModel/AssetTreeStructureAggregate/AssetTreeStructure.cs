@@ -1,6 +1,6 @@
-﻿namespace CMMSAPP.Domain.AggregatesModel.LevelAggregate;
+﻿namespace CMMSAPP.Domain.AggregatesModel.AssetTreeStructureAggregate;
 
-public class AssetTreeStructure : Entity
+public class AssetTreeStructure : Entity, IAggregateRoot
 {
     public Guid InstalledAssetCodeId { get; private set; }
     public InstalledAssetCode InstalledAssetCode { get; private set; }
@@ -18,6 +18,7 @@ public class AssetTreeStructure : Entity
         if (installedAssetCode == null) throw new AssetDomainException("کد تجهیز نصب‌شده نمی‌تواند خالی باشد.");
         if (level == null) throw new AssetDomainException("سطح تجهیز نمی‌تواند خالی باشد.");
 
+        Id = Guid.NewGuid();
         InstalledAssetCodeId = installedAssetCode.Id;
         InstalledAssetCode = installedAssetCode;
 

@@ -1,5 +1,5 @@
 ﻿namespace CMMSAPP.Domain.AggregatesModel.DimensionAggregate;
-public class Dimension : Entity
+public class Dimension : Entity, IAggregateRoot
 {
     public string Name { get; private set; }
     public string Unit { get; private set; }
@@ -8,26 +8,27 @@ public class Dimension : Entity
 
     public Dimension(string name, string unit)
     {
-        if (string.IsNullOrWhiteSpace(name))
-            throw new AssetDomainException("عنوان نمی‌تواند خالی باشد. لطفاً یک عنوان معتبر وارد کنید.");
+        if (!name.HasValue())
+            throw new AssetDomainException("عنوان نمی‌تواند خالی باشد.");
 
-        if (string.IsNullOrWhiteSpace(unit))
-            throw new AssetDomainException("واحد اندازه‌گیری نمی‌تواند خالی باشد. لطفاً یک مقدار صحیح وارد کنید.");
+        if (unit.HasValue())
+            throw new AssetDomainException("واحد اندازه‌گیری نمی‌تواند خالی باشد.");
 
+        Id = Guid.NewGuid();
         Name = name;
         Unit = unit;
     }
 
-    public void Update(string newName, string newUnit)
+    public void Update(string name, string unit)
     {
-        if (string.IsNullOrWhiteSpace(newName))
-            throw new AssetDomainException("به‌روزرسانی ناموفق بود. عنوان نمی‌تواند خالی باشد.");
+        if (!name.HasValue())
+            throw new AssetDomainException("عنوان نمی‌تواند خالی باشد.");
 
-        if (string.IsNullOrWhiteSpace(newUnit))
-            throw new AssetDomainException("به‌روزرسانی ناموفق بود. واحد اندازه‌گیری نمی‌تواند خالی باشد.");
+        if (unit.HasValue())
+            throw new AssetDomainException("واحد اندازه‌گیری نمی‌تواند خالی باشد.");
 
-        Name = newName;
-        Unit = newUnit;
+        Name = name;
+        Unit = unit;
     }
 }
 

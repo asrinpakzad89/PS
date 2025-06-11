@@ -210,7 +210,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Common\\CMMSAPP.Common.csproj": {
+                "projectPath": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Common\\CMMSAPP.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -75,3 +75,4 @@ C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.API\obj\Debug\net8.0
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.API\obj\Debug\net8.0\CMMSAPP.API.pdb
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.API\obj\Debug\net8.0\CMMSAPP.API.genruntimeconfig.cache
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.API\obj\Debug\net8.0\ref\CMMSAPP.API.dll
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.API\obj\Debug\net8.0\CMMSAPP.API.sourcelink.json

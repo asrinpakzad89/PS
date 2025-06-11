@@ -8,9 +8,10 @@ public class AssetGroup : Entity, IAggregateRoot
 
     public AssetGroup(string name, string? createdBy = null)
     {
-        if (string.IsNullOrWhiteSpace(name))
+        if (!name.HasValue())
             throw new AssetDomainException("عنوان گروه نمی‌تواند خالی باشد. لطفاً یک عنوان معتبر وارد کنید.");
 
+        Id = Guid.NewGuid();
         Name = name;
         SetCreationInfo(createdBy);
     }

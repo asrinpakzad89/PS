@@ -1,6 +1,6 @@
 ﻿namespace CMMSAPP.Domain.AggregatesModel.ManufacturerAggregate;
 
-public class Manufacturer : Entity
+public class Manufacturer : Entity, IAggregateRoot
 {
     public string CompanyName { get; private set; }
     public string Brand { get; private set; }
@@ -14,6 +14,10 @@ public class Manufacturer : Entity
     public Manufacturer(string companyName, string brand, string? phone,
                         string? address, string? email, string? country)
     {
+        if (!companyName.HasValue())
+            throw new AssetDomainException("نام شرکت نمی تواند خالی باشد.");
+
+        Id = Guid.NewGuid();
         CompanyName = companyName;
         Brand = brand;
         Phone = phone;
@@ -25,6 +29,9 @@ public class Manufacturer : Entity
     public void Update(string companyName, string brand, string? phone,
                        string? address, string? email, string? country)
     {
+        if (!companyName.HasValue())
+            throw new AssetDomainException("نام شرکت نمی تواند خالی باشد.");
+
         CompanyName = companyName;
         Brand = brand;
         Phone = phone;

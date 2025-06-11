@@ -9,3 +9,4 @@ C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\obj\D
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\obj\Debug\net8.0\refint\CMMSAPP.Infrastructure.dll
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\obj\Debug\net8.0\CMMSAPP.Infrastructure.pdb
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\obj\Debug\net8.0\ref\CMMSAPP.Infrastructure.dll
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Infrastructure\obj\Debug\net8.0\CMMSAPP.Infrastructure.sourcelink.json

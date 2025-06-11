@@ -16,12 +16,39 @@ public class AssetRelocation : Entity
 
     protected AssetRelocation() { }
 
-    public AssetRelocation(Guid assetId, Guid fromLocationId, Guid toLocationId, string? description, string? createdBy = null)
+    public AssetRelocation(Guid assetId, Guid fromLocationId, Guid toLocationId, string? description, DateTime? date, string? createdBy = null)
     {
+        if (assetId == null)
+            throw new AssetDomainException("کد تجهیز نمی‌تواند خالی باشد.");
+        if (fromLocationId == null)
+            throw new AssetDomainException("کد محل فعلی نمی‌تواند خالی باشد.");
+
+        if (toLocationId == null)
+            throw new AssetDomainException("کد محل نصب نمی‌تواند خالی باشد.");
+
+        Id = Guid.NewGuid();
         AssetId = assetId;
         FromLocationId = fromLocationId;
         ToLocationId = toLocationId;
-        Date = DateTime.UtcNow;
+        Date = date ?? DateTime.UtcNow;
+        Description = description;
+        SetCreationInfo(createdBy);
+    }
+    public void Update(Guid assetId, Guid fromLocationId, Guid toLocationId, string? description, DateTime? date, string? createdBy = null)
+    {
+        if (assetId == null)
+            throw new AssetDomainException("کد تجهیز نمی‌تواند خالی باشد.");
+        if (assetId == null)
+            throw new AssetDomainException("کد تجهیز نمی‌تواند خالی باشد.");
+
+        if (assetId == null)
+            throw new AssetDomainException("کد تجهیز نمی‌تواند خالی باشد.");
+
+        Id = Guid.NewGuid();
+        AssetId = assetId;
+        FromLocationId = fromLocationId;
+        ToLocationId = toLocationId;
+        Date = date ?? DateTime.UtcNow;
         Description = description;
         SetCreationInfo(createdBy);
     }

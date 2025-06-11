@@ -9,6 +9,13 @@ global using CMMSAPP.Domain.AggregatesModel.AssetAggregate;
 global using CMMSAPP.Domain.AggregatesModel.AssertCodingAggregate;
 global using CMMSAPP.Domain.AggregatesModel.ManufacturerAggregate;
 global using CMMSAPP.Domain.AggregatesModel.DimensionAggregate;
+global using CMMSAPP.Common.Extensions;
+global using CMMSAPP.Common.Utilities;
+global using CMMSAPP.Domain.AggregatesModel.MaterialAggregate;
+global using CMMSAPP.Domain.AggregatesModel.ToolsAggregate;
+global using CMMSAPP.Domain.AggregatesModel.StandardPartsAggregate;
+global using CMMSAPP.Domain.AggregatesModel.LocationCodingAggregate;
+global using CMMSAPP.Domain.AggregatesModel.InstalledAssetCodingAggregate;
 
 global using System.ComponentModel.DataAnnotations;
 

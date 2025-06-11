@@ -10,11 +10,16 @@ public class AssetCategory : Entity, IAggregateRoot
 
     public AssetCategory(string name, string code, Guid groupId, string? createdBy = null)
     {
-        if (string.IsNullOrWhiteSpace(name))
-            throw new AssetDomainException("عنوان دسته نمی‌تواند خالی باشد. لطفاً یک عنوان معتبر وارد کنید.");
+        if (!name.HasValue())
+            throw new AssetDomainException("عنوان دسته نمی‌تواند خالی باشد.");
 
-        if (string.IsNullOrWhiteSpace(code))
-            throw new AssetDomainException("کد دسته نمی‌تواند خالی باشد. لطفاً یک کد معتبر وارد کنید.");
+        if (!code.HasValue())
+            throw new AssetDomainException("کد دسته نمی‌تواند خالی باشد.");
+
+        if (groupId == null)
+            throw new AssetDomainException("گروه تجهیز نمی‌تواند خالی باشد.");
+
+        Id = Guid.NewGuid();
 
         Name = name;
         Code = code;
@@ -24,11 +29,15 @@ public class AssetCategory : Entity, IAggregateRoot
 
     public void Update(string name, string code, Guid groupId, string? modifiedBy = null)
     {
-        if (string.IsNullOrWhiteSpace(name))
-            throw new AssetDomainException("به‌روزرسانی ناموفق بود. عنوان دسته نمی‌تواند خالی باشد.");
+        if (!name.HasValue())
+            throw new AssetDomainException("عنوان دسته نمی‌تواند خالی باشد.");
 
-        if (string.IsNullOrWhiteSpace(code))
-            throw new AssetDomainException("به‌روزرسانی ناموفق بود. کد دسته نمی‌تواند خالی باشد.");
+        if (!code.HasValue())
+            throw new AssetDomainException("کد دسته نمی‌تواند خالی باشد.");
+
+        if (groupId == null)
+            throw new AssetDomainException("گروه تجهیز نمی‌تواند خالی باشد.");
+
 
         Name = name;
         Code = code;

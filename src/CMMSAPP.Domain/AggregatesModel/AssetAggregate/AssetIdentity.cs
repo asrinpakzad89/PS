@@ -11,9 +11,9 @@ public class AssetIdentity : Entity
     public Manufacturer Manufacturer { get; private set; }
 
     public string? YearOfManufacture { get; private set; }
-    public ShapeEnum? Shape { get; private set; }
-    public MaterialTypeEnum? Material { get; private set; }
-    public ImportanceLevelEnum ImportanceLevel { get; private set; }
+    public int? Shape { get; private set; }
+    public int? Material { get; private set; }
+    public int ImportanceLevel { get; private set; }
 
     public string? PhysicalLabel { get; private set; }
     public string? SerialNumber { get; private set; }
@@ -21,7 +21,7 @@ public class AssetIdentity : Entity
     public string? FunctionalDescription { get; private set; }
 
 
-    private readonly List<Dimension> _dimensions = new();
+    private readonly List<Dimension>? _dimensions = new();
     public IReadOnlyCollection<Dimension> Dimensions => _dimensions.AsReadOnly();
 
 
@@ -29,19 +29,24 @@ public class AssetIdentity : Entity
 
     protected AssetIdentity() { }
 
-    public AssetIdentity(Guid assetId, bool isStandard, ImportanceLevelEnum importanceLevel,
+    public AssetIdentity(Guid assetId, bool isStandard, ImportanceLevelEnum? importanceLevel,
                          Guid manufacturerId, string? yearOfManufacture,
                          ShapeEnum? shape, MaterialTypeEnum? material, string? physicalLabel,
                          string? serialNumber, string? functionalDescription,
                          IEnumerable<Dimension>? dimensions, string? technicalSpecifications)
     {
+        if (assetId == null) 
+            throw new AssetDomainException("کد تجهیز نمی‌تواند خالی باشد.");
+
+        Id = Guid.NewGuid();
+
         AssetId = assetId;
         IsStandard = isStandard;
-        ImportanceLevel = importanceLevel;
         ManufacturerId = manufacturerId;
         YearOfManufacture = yearOfManufacture;
-        Shape = shape;
-        Material = material;
+        Shape = shape?.ToInt() ?? 0;
+        Material = material?.ToInt() ?? 0;
+        ImportanceLevel = importanceLevel?.ToInt() ?? 0;
         PhysicalLabel = physicalLabel;
         SerialNumber = serialNumber;
         FunctionalDescription = functionalDescription;
@@ -52,18 +57,18 @@ public class AssetIdentity : Entity
             _dimensions.AddRange(dimensions);
     }
 
-    public void Update(bool isStandard, ImportanceLevelEnum importanceLevel,
+    public void Update(bool isStandard, ImportanceLevelEnum? importanceLevel,
                        Guid manufacturerId, string? yearOfManufacture,
                        ShapeEnum? shape, MaterialTypeEnum? material, string? physicalLabel,
                        string? serialNumber, string? functionalDescription,
                        IEnumerable<Dimension>? dimensions, string? technicalSpecifications)
     {
         IsStandard = isStandard;
-        ImportanceLevel = importanceLevel;
         ManufacturerId = manufacturerId;
         YearOfManufacture = yearOfManufacture;
-        Shape = shape;
-        Material = material;
+        Shape = shape?.ToInt() ?? 0;
+        Material = material?.ToInt() ?? 0;
+        ImportanceLevel = importanceLevel?.ToInt() ?? 0;
         PhysicalLabel = physicalLabel;
         SerialNumber = serialNumber;
         FunctionalDescription = functionalDescription;

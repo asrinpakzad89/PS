@@ -17,3 +17,4 @@ C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Application\obj\Debu
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Application\obj\Debug\net8.0\refint\CMMSAPP.Application.dll
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Application\obj\Debug\net8.0\CMMSAPP.Application.pdb
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Application\obj\Debug\net8.0\ref\CMMSAPP.Application.dll
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Application\obj\Debug\net8.0\CMMSAPP.Application.sourcelink.json

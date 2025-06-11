@@ -10,3 +10,4 @@ C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Common\obj\Debug\net
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Common\obj\Debug\net8.0\refint\CMMSAPP.Common.dll
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Common\obj\Debug\net8.0\CMMSAPP.Common.pdb
 C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Common\obj\Debug\net8.0\ref\CMMSAPP.Common.dll
+C:\Users\Zagros\Desktop\Project\CMMSAPP\CMMSAPP\src\CMMSAPP.Common\obj\Debug\net8.0\CMMSAPP.Common.sourcelink.json
