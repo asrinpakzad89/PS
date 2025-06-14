@@ -1,4 +1,4 @@
-﻿namespace CMMSAPP.Infrastructure.Data.EntityConfigurations.AssetStatusConfigurations;
+﻿namespace CMMSAPP.Infrastructure.Data.EntityConfigurations.AssertCodingConfigurations;
 
 public class AssetStatusEntityTypeConfiguration : IEntityTypeConfiguration<AssetStatus>
 {

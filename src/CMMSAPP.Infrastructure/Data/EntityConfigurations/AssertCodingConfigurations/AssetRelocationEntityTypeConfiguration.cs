@@ -1,4 +1,4 @@
-﻿namespace CMMSAPP.Infrastructure.Data.EntityConfigurations.AssetRelocationConfiguration;
+﻿namespace CMMSAPP.Infrastructure.Data.EntityConfigurations.AssertCodingConfigurations;
 
 public class AssetRelocationEntityTypeConfiguration : IEntityTypeConfiguration<AssetRelocation>
 {

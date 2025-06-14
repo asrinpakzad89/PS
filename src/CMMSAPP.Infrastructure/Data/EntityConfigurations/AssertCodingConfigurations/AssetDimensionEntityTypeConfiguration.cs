@@ -1,4 +1,4 @@
-﻿namespace CMMSAPP.Infrastructure.Data.EntityConfigurations.AssetDimensionConfogurations;
+﻿namespace CMMSAPP.Infrastructure.Data.EntityConfigurations.AssertCodingConfigurations;
 
 public class AssetDimensionEntityTypeConfiguration : IEntityTypeConfiguration<AssetDimension>
 {
