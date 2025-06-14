@@ -1,6 +1,6 @@
 ﻿namespace CMMSAPP.Domain.Enums;
 
-public enum UnitOfMeasureEnum
+public enum UnitOfMeasureEnum :int
 {
     [Display(Name = "ایکومزا")]
     Ikumza = 1,
@@ -25,6 +25,9 @@ public enum UnitOfMeasureEnum
 
     [Display(Name = "دستگاه")]
     Device = 8,
+
+    [Display(Name = "نفر")]
+    Person = 9,
 
     [Display(Name = "دور")]
     Turn = 10,
@@ -77,12 +80,9 @@ public enum UnitOfMeasureEnum
     [Display(Name = "میلیون ریال")]
     MillionRial = 26,
 
-    [Display(Name = "نفر")]
-    Person = 27,
-
     [Display(Name = "واگن قند سفید")]
-    WhiteSugarWagon = 28,
+    WhiteSugarWagon = 27,
 
     [Display(Name = "واگن قند سبز")]
-    GreenSugarWagon = 29,
+    GreenSugarWagon = 28,
 }

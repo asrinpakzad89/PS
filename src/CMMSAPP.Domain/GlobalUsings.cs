@@ -16,7 +16,10 @@ global using CMMSAPP.Domain.AggregatesModel.ToolsAggregate;
 global using CMMSAPP.Domain.AggregatesModel.StandardPartsAggregate;
 global using CMMSAPP.Domain.AggregatesModel.LocationCodingAggregate;
 global using CMMSAPP.Domain.AggregatesModel.InstalledAssetCodingAggregate;
-
+global using MediatR;
 global using System.ComponentModel.DataAnnotations;
+global using AnimalIdentifier.Domain.SeedWork;
+global using CMMSAPP.Domain.AggregatesModel.FileResourceAggregate;
+
 
 

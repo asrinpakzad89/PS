@@ -1,10 +1,10 @@
 ﻿namespace CMMSAPP.Domain.Enums;
 
-public enum AssetTypeEnum
+public enum AssetTypeEnum : int
 {
     [Display(Name = "مونتاژ")]
     Assemble = 1,
 
     [Display(Name = "قطعه")]
-    Part = 0,
+    Part = 2,
 }

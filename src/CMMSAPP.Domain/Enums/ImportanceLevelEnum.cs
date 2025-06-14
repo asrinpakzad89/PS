@@ -1,13 +1,13 @@
 ﻿namespace CMMSAPP.Domain.Enums;
 
-public enum ImportanceLevelEnum
+public enum ImportanceLevelEnum : int
 {
     [Display(Name = "A")]
-    Low = 0,
+    Low = 1,
 
     [Display(Name = "B")]
-    Medium = 1,
+    Medium = 2,
 
     [Display(Name = "C")]
-    High = 2
+    High = 3
 }

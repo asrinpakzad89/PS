@@ -2,8 +2,8 @@
 
 public class AssetTreeStructure : Entity, IAggregateRoot
 {
-    public Guid InstalledAssetCodeId { get; private set; }
-    public InstalledAssetCode InstalledAssetCode { get; private set; }
+    public Guid InstalledAssetCodingId { get; private set; }
+    public InstalledAssetCoding InstalledAssetCoding { get; private set; }
 
     public Guid LevelId { get; private set; }
     public Level Level { get; private set; }
@@ -13,14 +13,13 @@ public class AssetTreeStructure : Entity, IAggregateRoot
 
     protected AssetTreeStructure() { }
 
-    public AssetTreeStructure(InstalledAssetCode installedAssetCode, Level level, string? description = null, string? createdBy = null)
+    public AssetTreeStructure(Guid installedAssetCodingId, Level level, string? description = null, string? createdBy = null)
     {
-        if (installedAssetCode == null) throw new AssetDomainException("کد تجهیز نصب‌شده نمی‌تواند خالی باشد.");
+        if (installedAssetCodingId == null) throw new AssetDomainException("کد تجهیز نصب‌شده نمی‌تواند خالی باشد.");
         if (level == null) throw new AssetDomainException("سطح تجهیز نمی‌تواند خالی باشد.");
 
         Id = Guid.NewGuid();
-        InstalledAssetCodeId = installedAssetCode.Id;
-        InstalledAssetCode = installedAssetCode;
+        InstalledAssetCodingId = installedAssetCodingId;
 
         LevelId = level.Id;
         Level = level;
@@ -29,13 +28,12 @@ public class AssetTreeStructure : Entity, IAggregateRoot
         SetCreationInfo(createdBy);
     }
 
-    public void Update(InstalledAssetCode installedAssetCode, Level level, string? description = null, string? modifiedBy = null)
+    public void Update(Guid installedAssetCodingId, Level level, string? description = null, string? modifiedBy = null)
     {
-        if (installedAssetCode == null) throw new AssetDomainException("کد تجهیز نصب‌شده نمی‌تواند خالی باشد.");
+        if (InstalledAssetCodingId == null) throw new AssetDomainException("کد تجهیز نصب‌شده نمی‌تواند خالی باشد.");
         if (level == null) throw new AssetDomainException("سطح تجهیز نمی‌تواند خالی باشد.");
 
-        InstalledAssetCodeId = installedAssetCode.Id;
-        InstalledAssetCode = installedAssetCode;
+        InstalledAssetCodingId = installedAssetCodingId;
 
         LevelId = level.Id;
         Level = level;

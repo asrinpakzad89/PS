@@ -1,4 +1,6 @@
-﻿namespace CMMSAPP.Domain.AggregatesModel.LevelAggregate;
+﻿using CMMSAPP.Domain.AggregatesModel.AssetTreeStructureAggregate;
+
+namespace CMMSAPP.Domain.AggregatesModel.LevelAggregate;
 
 public class Level : Entity, IAggregateRoot
 {
@@ -12,6 +14,12 @@ public class Level : Entity, IAggregateRoot
     public IReadOnlyCollection<Level> Children => _children.AsReadOnly();
 
     public string? Description { get; private set; }
+
+    #region Asset Tree Structure
+    private readonly List<AssetTreeStructure> _assetTreeStructureList = new();
+    public IReadOnlyCollection<AssetTreeStructure> AssetTreeStructureList => _assetTreeStructureList.AsReadOnly();
+    #endregion
+
 
     protected Level() { }
 

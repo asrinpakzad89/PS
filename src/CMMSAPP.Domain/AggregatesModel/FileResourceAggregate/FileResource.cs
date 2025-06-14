@@ -6,7 +6,7 @@ public class FileResource : Entity, IAggregateRoot
     public string FilePath { get; private set; }
     public string? Description { get; private set; }
 
-    public int OwnerType { get; private set; } // Asset/ Standard Part
+    public FileOwnerTypeEnum OwnerType { get; private set; } // Asset/ Standard Part/ Materials
     public Guid OwnerId { get; private set; } //  Asset.Id/ StandardPart.Id
 
 
@@ -22,7 +22,7 @@ public class FileResource : Entity, IAggregateRoot
         Title = title;
         FilePath = filePath;
         OwnerId = entityId;
-        OwnerType = ownerType.ToInt();
+        OwnerType = ownerType;
         Description = description;
 
         SetCreationInfo(createBy);
@@ -38,7 +38,7 @@ public class FileResource : Entity, IAggregateRoot
         Title = title;
         FilePath = filePath;
         OwnerId = entityId;
-        OwnerType = ownerType.ToInt();
+        OwnerType = ownerType;
         Description = description;
 
         SetModificationInfo(modifyBy);

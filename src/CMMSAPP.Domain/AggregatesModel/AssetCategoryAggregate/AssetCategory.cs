@@ -1,10 +1,18 @@
-﻿namespace CMMSAPP.Domain.AggregatesModel.AssetCategoryAggregate;
+﻿using CMMSAPP.Domain.AggregatesModel.AssetGroupAggregate;
+
+namespace CMMSAPP.Domain.AggregatesModel.AssetCategoryAggregate;
 
 public class AssetCategory : Entity, IAggregateRoot
 {
-    public string Name { get; private set; }
+    public string Title { get; private set; }
     public string Code { get; private set; }
-    public Guid GroupId { get; private set; }
+    public Guid AssetGroupId { get; private set; }
+    public AssetGroup AssetGroup { get; private set; }
+
+    #region Asset
+    private readonly List<Asset> _AssetList = new();
+    public IReadOnlyCollection<Asset> AssetList => _AssetList.AsReadOnly();
+    #endregion
 
     protected AssetCategory() { }
 
@@ -21,9 +29,9 @@ public class AssetCategory : Entity, IAggregateRoot
 
         Id = Guid.NewGuid();
 
-        Name = name;
+        Title = name;
         Code = code;
-        GroupId = groupId;
+        AssetGroupId = groupId;
         SetCreationInfo(createdBy);
     }
 
@@ -39,9 +47,9 @@ public class AssetCategory : Entity, IAggregateRoot
             throw new AssetDomainException("گروه تجهیز نمی‌تواند خالی باشد.");
 
 
-        Name = name;
+        Title = name;
         Code = code;
-        GroupId = groupId;
+        AssetGroupId = groupId;
         SetModificationInfo(modifiedBy);
     }
 

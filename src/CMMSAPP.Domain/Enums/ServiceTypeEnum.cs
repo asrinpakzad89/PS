@@ -1,6 +1,6 @@
 ﻿namespace CMMSAPP.Domain.Enums;
 
-public enum ServiceTypeEnum
+public enum ServiceTypeEnum : int
 {
     [Display(Name = "نگهداری و تعمیرات")]
     PM = 1,

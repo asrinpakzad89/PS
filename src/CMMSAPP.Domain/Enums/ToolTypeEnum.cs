@@ -1,6 +1,6 @@
 ﻿namespace CMMSAPP.Domain.Enums;
 
-public enum ToolTypeEnum
+public enum ToolTypeEnum : int
 {
     [Display(Name = "ابزار دستی")]
     HandTool = 1,

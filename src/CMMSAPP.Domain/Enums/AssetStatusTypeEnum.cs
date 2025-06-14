@@ -1,21 +1,18 @@
 ﻿namespace CMMSAPP.Domain.Enums;
-
-using System.ComponentModel.DataAnnotations;
-
-public enum AssetStatusTypeEnum
+public enum AssetStatusTypeEnum : int
 {
     [Display(Name = "فعال")]
-    Active = 0,
+    Active = 1,
 
     [Display(Name = "غیرفعال")]
-    Inactive = 1,
+    Inactive = 2,
 
     [Display(Name = "در حال تعمیر")]
-    UnderMaintenance = 2,
+    UnderMaintenance = 3,
 
     [Display(Name = "در انبار")]
-    InStock = 3,
+    InStock = 4,
 
     [Display(Name = "اسقاط شده")]
-    Decommissioned = 4
+    Decommissioned = 5
 }

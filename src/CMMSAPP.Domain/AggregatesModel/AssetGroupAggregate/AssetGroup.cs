@@ -2,26 +2,31 @@
 
 public class AssetGroup : Entity, IAggregateRoot
 {
-    public string Name { get; private set; }
+    public string Title { get; private set; }
+
+    #region Asset Category
+    private readonly List<AssetCategory> _AssetCategoryList = new();
+    public IReadOnlyCollection<AssetCategory> AssetCategoryList => _AssetCategoryList.AsReadOnly();
+    #endregion
 
     protected AssetGroup() { }
 
-    public AssetGroup(string name, string? createdBy = null)
+    public AssetGroup(string title, string? createdBy = null)
     {
-        if (!name.HasValue())
+        if (!title.HasValue())
             throw new AssetDomainException("عنوان گروه نمی‌تواند خالی باشد. لطفاً یک عنوان معتبر وارد کنید.");
 
         Id = Guid.NewGuid();
-        Name = name;
+        Title = title;
         SetCreationInfo(createdBy);
     }
 
-    public void Update(string name, string? modifiedBy = null)
+    public void Update(string title, string? modifiedBy = null)
     {
-        if (string.IsNullOrWhiteSpace(name))
+        if (title.HasValue())
             throw new AssetDomainException("به‌روزرسانی ناموفق بود. عنوان گروه نمی‌تواند خالی باشد.");
 
-        Name = name;
+        Title = title;
         SetModificationInfo(modifiedBy);
     }
 

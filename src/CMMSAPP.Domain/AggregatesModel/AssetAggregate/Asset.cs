@@ -1,4 +1,6 @@
 ﻿using CMMSAPP.Common.Utilities;
+using CMMSAPP.Domain.AggregatesModel.AssertCodingAggregate;
+using CMMSAPP.Domain.AggregatesModel.AssetLocationCodingAggregate;
 using CMMSAPP.Domain.AggregatesModel.FileResourceAggregate;
 using CMMSAPP.Domain.AggregatesModel.ToolsAggregate;
 
@@ -8,13 +10,13 @@ public class Asset : Entity, IAggregateRoot
 {
     public string Title { get; private set; }
     public string Code { get; private set; }
-    public int AssetType { get; private set; } // Assembly or Part
+    public bool IsAssembly { get; private set; } // Assembly or Part
 
     //public int Quantity { get; private set; }
     //public decimal TotalCost { get; private set; }
 
     public Guid CategoryId { get; private set; }
-    public AssetCategory Category { get; private set; }
+    public AssetCategory AssetCategory { get; private set; }
 
     #region Parent & Children
     public Guid? ParentId { get; private set; }
@@ -39,6 +41,32 @@ public class Asset : Entity, IAggregateRoot
     public IReadOnlyCollection<FileResource> FileList => _FileList.AsReadOnly();
     #endregion
 
+    #region AssetCoding
+    private readonly List<AssetCoding> _AssetCodingList = new();
+    public IReadOnlyCollection<AssetCoding> AssetCodingList => _AssetCodingList.AsReadOnly();
+    #endregion
+
+    #region Location History & Current Location
+    private readonly List<AssetRelocation> _locationHistory = new();
+    public IReadOnlyCollection<AssetRelocation> LocationHistory => _locationHistory.AsReadOnly();
+
+    public AssetRelocation CurrentLocation =>
+    _locationHistory.OrderByDescending(s => s.Date).FirstOrDefault();
+    #endregion
+
+    #region Location Coding
+    private readonly List<AssetLocationCoding> _AssetlocationCodingList = new();
+    public IReadOnlyCollection<AssetLocationCoding> AssetocationCodingList => _AssetlocationCodingList.AsReadOnly();
+    #endregion
+
+    #region Status History & Current Status
+    private readonly List<AssetStatus> _statusHistory = new();
+    public IReadOnlyCollection<AssetStatus> StatusHistory => _statusHistory.AsReadOnly();
+
+    public AssetStatusTypeEnum CurrentStatus =>
+    _statusHistory.OrderByDescending(s => s.Date).FirstOrDefault()?.Status ?? AssetStatusTypeEnum.Active;
+    #endregion
+
     //#region Tools
     //private readonly List<AssetTool> _ToolsList = new();
     //public IReadOnlyCollection<AssetTool> ToolList => _ToolsList.AsReadOnly();
@@ -48,21 +76,6 @@ public class Asset : Entity, IAggregateRoot
     //private readonly List<AssetMaterial> _ToolsList = new();
     //public IReadOnlyCollection<AssetMaterial> ToolList => _ToolsList.AsReadOnly();
     //#endregion
-    #region Location History & Current Location
-    private readonly List<AssetRelocation> _locationHistory = new();
-    public IReadOnlyCollection<AssetRelocation> LocationHistory => _locationHistory.AsReadOnly();
-
-    public AssetRelocation CurrentLocation =>
-    _locationHistory.OrderByDescending(s => s.Date).FirstOrDefault();
-    #endregion
-
-    #region Status History & Current Status
-    private readonly List<AssetStatus> _statusHistory = new();
-    public IReadOnlyCollection<AssetStatus> StatusHistory => _statusHistory.AsReadOnly();
-
-    public int CurrentStatus =>
-    _statusHistory.OrderByDescending(s => s.Date).FirstOrDefault()?.Status ?? AssetStatusTypeEnum.Active.ToInt();
-    #endregion
 
     protected Asset() { }
 
@@ -115,7 +128,7 @@ public class Asset : Entity, IAggregateRoot
 
     public void AddStatus(AssetStatusTypeEnum newStatus, DateTime neweDate, string? newDescription, string? createdBy = null)
     {
-        if (CurrentStatus == newStatus.ToInt()) return;
+        if (CurrentStatus == newStatus) return;
 
         _statusHistory.Add(new AssetStatus(Id, newStatus, neweDate, newDescription, createdBy));
         SetModificationInfo(createdBy);
@@ -138,7 +151,13 @@ public class Asset : Entity, IAggregateRoot
         AssetIdentityId = assetIdentityId;
         SetModificationInfo(modifiedBy);
     }
+    public void AddFile(FileResource file)
+    {
+        if (file.OwnerId != this.Id || file.OwnerType != FileOwnerTypeEnum.Asset)
+            throw new InvalidOperationException("فابل مربوط به این انتیتی نیست.");
 
+        _FileList.Add(file);
+    }
     public void Remove(string? modifiedBy = null) => SoftDelete(modifiedBy);
     public void Disable(string? modifiedBy = null) => Disable(modifiedBy);
     public void Enable(string? modifiedBy = null) => Enable(modifiedBy);

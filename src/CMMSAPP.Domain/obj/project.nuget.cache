@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fyj2qBEeuF4=",
+  "dgSpecHash": "iQDAOg6fMzc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Zagros\\Desktop\\Project\\CMMSAPP\\CMMSAPP\\src\\CMMSAPP.Domain\\CMMSAPP.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Zagros\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
+    "C:\\Users\\Zagros\\.nuget\\packages\\mediatr\\12.5.0\\mediatr.12.5.0.nupkg.sha512",
+    "C:\\Users\\Zagros\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Zagros\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\Zagros\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.3.0\\microsoft.aspnetcore.authentication.core.2.3.0.nupkg.sha512",
     "C:\\Users\\Zagros\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.3.0\\microsoft.aspnetcore.authorization.2.3.0.nupkg.sha512",

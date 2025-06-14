@@ -1,12 +1,7 @@
 ﻿namespace CMMSAPP.Domain.Enums;
 
-using System.ComponentModel.DataAnnotations;
-
-public enum MaterialTypeEnum
+public enum MaterialTypeEnum : int
 {
-    [Display(Name = "ورق فولادی")]
-    SteelSheet = 0,
-
     [Display(Name = "ورق استیل")]
     StainlessSteelSheet = 1,
 
@@ -26,5 +21,10 @@ public enum MaterialTypeEnum
     Polyethylene = 6,
 
     [Display(Name = "پلاستیکی")]
-    Plastic = 7
+    Plastic = 7,
+
+    [Display(Name = "ورق فولادی")]
+    SteelSheet = 8,
+
+
 }

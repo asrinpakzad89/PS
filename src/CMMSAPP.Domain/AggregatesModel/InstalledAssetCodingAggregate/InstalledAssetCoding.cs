@@ -1,9 +1,11 @@
-﻿namespace CMMSAPP.Domain.AggregatesModel.InstalledAssetCodingAggregate;
+﻿using CMMSAPP.Domain.AggregatesModel.AssetTreeStructureAggregate;
 
-public class InstalledAssetCode : Entity, IAggregateRoot
+namespace CMMSAPP.Domain.AggregatesModel.InstalledAssetCodingAggregate;
+
+public class InstalledAssetCoding : Entity, IAggregateRoot
 {
     public Guid AssertCodingId { get; private set; }
-    public AssertCoding AssertCoding { get; private set; }
+    public AssetCoding AssertCoding { get; private set; }
 
     public Guid LocationId { get; private set; }
     public Location Location { get; private set; }
@@ -17,9 +19,15 @@ public class InstalledAssetCode : Entity, IAggregateRoot
     public bool IsDeleted { get; private set; }
     public DateTime? DeletedAt { get; private set; }
 
-    public InstalledAssetCode() { }
+    #region Asset Tree Structure
+    private readonly List<AssetTreeStructure> _assetTreeStructureList = new();
+    public IReadOnlyCollection<AssetTreeStructure> AssetTreeStructureList => _assetTreeStructureList.AsReadOnly();
+    #endregion
 
-    public InstalledAssetCode(Guid assertCodingId, Guid locationId, int number, string code, string? description = null, string? createdBy = null)
+
+    public InstalledAssetCoding() { }
+
+    public InstalledAssetCoding(Guid assertCodingId, Guid locationId, int number, string code, string? description = null, string? createdBy = null)
     {
         if (assertCodingId == null) throw new AssetDomainException("کدینگ دارایی نمی‌تواند خالی باشد.");
         if (locationId == null) throw new AssetDomainException("مکان استقرار نمی‌تواند خالی باشد.");

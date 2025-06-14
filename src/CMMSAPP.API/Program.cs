@@ -4,6 +4,7 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+#region Log
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Error()
     .WriteTo.Console()
@@ -13,10 +14,12 @@ Log.Logger = new LoggerConfiguration()
         rollOnFileSizeLimit: true)
     .CreateLogger();
 builder.Host.UseSerilog();
+#endregion
 
 #region Dependency Injection
-builder.Services.AddApplicationCore(builder.Configuration);
+builder.Services.AddApplication(builder.Configuration);
 #endregion
+
 // Add services to the container.
 
 builder.Services.AddControllers();

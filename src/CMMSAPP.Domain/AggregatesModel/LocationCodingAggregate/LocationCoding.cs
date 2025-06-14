@@ -1,4 +1,5 @@
-﻿using CMMSAPP.Domain.AggregatesModel.LocationAggregate;
+﻿using CMMSAPP.Domain.AggregatesModel.AssetLocationCodingAggregate;
+using CMMSAPP.Domain.AggregatesModel.LocationAggregate;
 
 namespace CMMSAPP.Domain.AggregatesModel.LocationCodingAggregate;
 
@@ -8,6 +9,14 @@ public class LocationCoding : Entity, IAggregateRoot
     public Location Location { get; private set; }
 
     public string Code { get; set; }
+
+
+    #region Location Coding
+    private readonly List<AssetLocationCoding> _AssetlocationCodingList = new();
+    public IReadOnlyCollection<AssetLocationCoding> AssetocationCodingList => _AssetlocationCodingList.AsReadOnly();
+    #endregion
+
+
     protected LocationCoding() { }
 
     public LocationCoding(Guid locationId, string code, string? createdBy = null)

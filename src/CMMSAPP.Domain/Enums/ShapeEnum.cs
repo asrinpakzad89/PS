@@ -1,9 +1,7 @@
 ﻿namespace CMMSAPP.Domain.Enums;
 
-public enum ShapeEnum
+public enum ShapeEnum : int
 {
-    [Display(Name = "استوانه‌ای")]
-    Cylindrical = 0,
 
     [Display(Name = "نیم‌استوانه‌ای")]
     SemiCylindrical = 1,
@@ -25,4 +23,8 @@ public enum ShapeEnum
 
     [Display(Name = "بدون شکل هندسی خاص")]
     Irregular = 7,
+
+    [Display(Name = "استوانه‌ای")]
+    Cylindrical = 8,
+
 }

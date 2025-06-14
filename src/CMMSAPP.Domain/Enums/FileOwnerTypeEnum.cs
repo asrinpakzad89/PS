@@ -1,8 +1,14 @@
 ﻿namespace CMMSAPP.Domain.Enums;
 
-public enum FileOwnerTypeEnum
+public enum FileOwnerTypeEnum: int
 {
+    [Display(Name ="تجهیز")]
     Asset = 1,
-    StandardPart = 2
+
+    [Display(Name = "قطعه")]
+    StandardPart = 2,
+
+    [Display(Name = "مواد مضرفی")]
+    Material = 3
 }
 

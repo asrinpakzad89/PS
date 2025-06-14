@@ -4,9 +4,13 @@ public class Material : Entity, IAggregateRoot
 {
     public string Title { get; private set; }
     public string Code { get; private set; }
-    public int UnitOfMeasure { get; private set; }
+    public UnitOfMeasureEnum UnitOfMeasure { get; private set; }
     public string? TechnicalSpecifications { get; private set; }
 
+    #region Files
+    private readonly List<FileResource> _FileList = new();
+    public IReadOnlyCollection<FileResource> FileList => _FileList.AsReadOnly();
+    #endregion
     public Material() { }
 
     public Material(string title, string code, UnitOfMeasureEnum unitOfMeasure, string? technicalSpecifications, string? createdBy = null)
@@ -23,7 +27,7 @@ public class Material : Entity, IAggregateRoot
         Id = Guid.NewGuid();
         Title = title;
         Code = code;
-        UnitOfMeasure = unitOfMeasure.ToInt();
+        UnitOfMeasure = unitOfMeasure;
         TechnicalSpecifications = technicalSpecifications;
         SetCreationInfo(createdBy);
     }
@@ -41,9 +45,16 @@ public class Material : Entity, IAggregateRoot
 
         Title = title;
         Code = code;
-        UnitOfMeasure = unitOfMeasure.ToInt();
+        UnitOfMeasure = unitOfMeasure;
         TechnicalSpecifications = technicalSpecifications;
         SetCreationInfo(createdBy);
+    }
+    public void AddFile(FileResource file)
+    {
+        if (file.OwnerId != this.Id || file.OwnerType != FileOwnerTypeEnum.Material)
+            throw new InvalidOperationException("فابل مربوط به این انتیتی نیست.");
+
+        _FileList.Add(file);
     }
     public void Remove(string? modifiedBy = null) => SoftDelete(modifiedBy);
     public void Disable(string? modifiedBy = null) => Disable(modifiedBy);
