@@ -49,6 +49,25 @@ namespace CMMSAPP.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Dimensions",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Title = table.Column<string>(type: "character varying(150)", maxLength: 150, nullable: false),
+                    Unit = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    IsDelete = table.Column<bool>(type: "boolean", nullable: false),
+                    IsDisable = table.Column<bool>(type: "boolean", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    CreatedBy = table.Column<string>(type: "text", nullable: true),
+                    ModifiedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    ModifiedBy = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Dimensions", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "InstalledAssetCodings",
                 columns: table => new
                 {
@@ -300,8 +319,8 @@ namespace CMMSAPP.Infrastructure.Migrations
                     Code = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     IsAssembly = table.Column<bool>(type: "boolean", nullable: false),
                     CategoryId = table.Column<Guid>(type: "uuid", nullable: false),
-                    ParentId = table.Column<Guid>(type: "uuid", nullable: true),
                     AssetIdentityId = table.Column<Guid>(type: "uuid", nullable: false),
+                    ParentId = table.Column<Guid>(type: "uuid", nullable: true),
                     IsDelete = table.Column<bool>(type: "boolean", nullable: false),
                     IsDisable = table.Column<bool>(type: "boolean", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
@@ -333,31 +352,6 @@ namespace CMMSAPP.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Dimensions",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Title = table.Column<string>(type: "character varying(150)", maxLength: 150, nullable: false),
-                    Unit = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
-                    AssetIdentityId = table.Column<Guid>(type: "uuid", nullable: true),
-                    IsDelete = table.Column<bool>(type: "boolean", nullable: false),
-                    IsDisable = table.Column<bool>(type: "boolean", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    CreatedBy = table.Column<string>(type: "text", nullable: true),
-                    ModifiedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    ModifiedBy = table.Column<string>(type: "text", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Dimensions", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Dimensions_AssetIdentities_AssetIdentityId",
-                        column: x => x.AssetIdentityId,
-                        principalTable: "AssetIdentities",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AssertCodings",
                 columns: table => new
                 {
@@ -385,15 +379,13 @@ namespace CMMSAPP.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "AssetLocationCodings",
+                name: "AssetDimensions",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     AssetId = table.Column<Guid>(type: "uuid", nullable: false),
-                    LocationCodingId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Number = table.Column<int>(type: "integer", nullable: false),
-                    Code = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: true),
+                    DimensionId = table.Column<Guid>(type: "uuid", nullable: false),
+                    Value = table.Column<decimal>(type: "numeric", nullable: false),
                     IsDelete = table.Column<bool>(type: "boolean", nullable: false),
                     IsDisable = table.Column<bool>(type: "boolean", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
@@ -403,17 +395,17 @@ namespace CMMSAPP.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AssetLocationCodings", x => x.Id);
+                    table.PrimaryKey("PK_AssetDimensions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_AssetLocationCodings_Assets_AssetId",
+                        name: "FK_AssetDimensions_Assets_AssetId",
                         column: x => x.AssetId,
                         principalTable: "Assets",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_AssetLocationCodings_LocationCodings_LocationCodingId",
-                        column: x => x.LocationCodingId,
-                        principalTable: "LocationCodings",
+                        name: "FK_AssetDimensions_Dimensions_DimensionId",
+                        column: x => x.DimensionId,
+                        principalTable: "Dimensions",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -526,49 +518,17 @@ namespace CMMSAPP.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "AssetDimensions",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    AssetId = table.Column<Guid>(type: "uuid", nullable: false),
-                    DimensionId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Value = table.Column<decimal>(type: "numeric", nullable: false),
-                    IsDelete = table.Column<bool>(type: "boolean", nullable: false),
-                    IsDisable = table.Column<bool>(type: "boolean", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    CreatedBy = table.Column<string>(type: "text", nullable: true),
-                    ModifiedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    ModifiedBy = table.Column<string>(type: "text", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AssetDimensions", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_AssetDimensions_Assets_AssetId",
-                        column: x => x.AssetId,
-                        principalTable: "Assets",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_AssetDimensions_Dimensions_DimensionId",
-                        column: x => x.DimensionId,
-                        principalTable: "Dimensions",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "InstalledAssetCodes",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    AssertCodingId = table.Column<Guid>(type: "uuid", nullable: false),
-                    LocationId = table.Column<Guid>(type: "uuid", nullable: false),
+                    AssetCodingId = table.Column<Guid>(type: "uuid", nullable: false),
+                    LocationCodingId = table.Column<Guid>(type: "uuid", nullable: false),
                     Number = table.Column<int>(type: "integer", nullable: false),
                     Code = table.Column<string>(type: "character varying(150)", maxLength: 150, nullable: false),
                     Description = table.Column<string>(type: "text", nullable: true),
-                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
-                    DeletedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    AssetId = table.Column<Guid>(type: "uuid", nullable: true),
+                    LocationId = table.Column<Guid>(type: "uuid", nullable: true),
                     IsDelete = table.Column<bool>(type: "boolean", nullable: false),
                     IsDisable = table.Column<bool>(type: "boolean", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
@@ -580,17 +540,27 @@ namespace CMMSAPP.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_InstalledAssetCodes", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_InstalledAssetCodes_AssertCodings_AssertCodingId",
-                        column: x => x.AssertCodingId,
+                        name: "FK_InstalledAssetCodes_AssertCodings_AssetCodingId",
+                        column: x => x.AssetCodingId,
                         principalTable: "AssertCodings",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_InstalledAssetCodes_Assets_AssetId",
+                        column: x => x.AssetId,
+                        principalTable: "Assets",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_InstalledAssetCodes_LocationCodings_LocationCodingId",
+                        column: x => x.LocationCodingId,
+                        principalTable: "LocationCodings",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_InstalledAssetCodes_Locations_LocationId",
                         column: x => x.LocationId,
                         principalTable: "Locations",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -651,16 +621,6 @@ namespace CMMSAPP.Infrastructure.Migrations
                 column: "ManufacturerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AssetLocationCodings_AssetId",
-                table: "AssetLocationCodings",
-                column: "AssetId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_AssetLocationCodings_LocationCodingId",
-                table: "AssetLocationCodings",
-                column: "LocationCodingId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_AssetRelocations_AssetId",
                 table: "AssetRelocations",
                 column: "AssetId");
@@ -706,11 +666,6 @@ namespace CMMSAPP.Infrastructure.Migrations
                 column: "LevelId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Dimensions_AssetIdentityId",
-                table: "Dimensions",
-                column: "AssetIdentityId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_FileResources_AssetId",
                 table: "FileResources",
                 column: "AssetId");
@@ -726,9 +681,19 @@ namespace CMMSAPP.Infrastructure.Migrations
                 column: "StandardPartId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_InstalledAssetCodes_AssertCodingId",
+                name: "IX_InstalledAssetCodes_AssetCodingId",
                 table: "InstalledAssetCodes",
-                column: "AssertCodingId");
+                column: "AssetCodingId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_InstalledAssetCodes_AssetId",
+                table: "InstalledAssetCodes",
+                column: "AssetId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_InstalledAssetCodes_LocationCodingId",
+                table: "InstalledAssetCodes",
+                column: "LocationCodingId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_InstalledAssetCodes_LocationId",
@@ -758,9 +723,6 @@ namespace CMMSAPP.Infrastructure.Migrations
                 name: "AssetDimensions");
 
             migrationBuilder.DropTable(
-                name: "AssetLocationCodings");
-
-            migrationBuilder.DropTable(
                 name: "AssetRelocations");
 
             migrationBuilder.DropTable(
@@ -785,9 +747,6 @@ namespace CMMSAPP.Infrastructure.Migrations
                 name: "Dimensions");
 
             migrationBuilder.DropTable(
-                name: "LocationCodings");
-
-            migrationBuilder.DropTable(
                 name: "InstalledAssetCodes");
 
             migrationBuilder.DropTable(
@@ -803,10 +762,13 @@ namespace CMMSAPP.Infrastructure.Migrations
                 name: "AssertCodings");
 
             migrationBuilder.DropTable(
-                name: "Locations");
+                name: "LocationCodings");
 
             migrationBuilder.DropTable(
                 name: "Assets");
+
+            migrationBuilder.DropTable(
+                name: "Locations");
 
             migrationBuilder.DropTable(
                 name: "AssetCategories");

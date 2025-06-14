@@ -2,9 +2,9 @@
 
 namespace CMMSAPP.Infrastructure.Data.EntityConfigurations.AssetGroupConfigurations;
 
-public class AssetGroupEntityTypeConfiguration : IEntityTypeConfiguration<AssetGroup>
+public class AssetGroupEntityTypeConfiguration : IEntityTypeConfiguration<Group>
 {
-    public void Configure(EntityTypeBuilder<AssetGroup> builder)
+    public void Configure(EntityTypeBuilder<Group> builder)
     {
         builder.HasKey(x => x.Id);
 
@@ -14,7 +14,7 @@ public class AssetGroupEntityTypeConfiguration : IEntityTypeConfiguration<AssetG
        .IsUnicode();
 
 
-        builder.HasMany(x=>x.AssetCategoryList)
+        builder.HasMany(x=>x.Categories)
             .WithOne(x=>x.AssetGroup)
             .HasForeignKey(x=>x.AssetGroupId)
             .OnDelete(DeleteBehavior.Restrict);

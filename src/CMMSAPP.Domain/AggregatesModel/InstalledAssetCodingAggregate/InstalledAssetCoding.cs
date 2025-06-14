@@ -1,75 +1,59 @@
 ﻿using CMMSAPP.Domain.AggregatesModel.AssetTreeStructureAggregate;
+using CMMSAPP.Domain.AggregatesModel.LocationAggregate;
 
 namespace CMMSAPP.Domain.AggregatesModel.InstalledAssetCodingAggregate;
 
 public class InstalledAssetCoding : Entity, IAggregateRoot
 {
-    public Guid AssertCodingId { get; private set; }
-    public AssetCoding AssertCoding { get; private set; }
+    public Guid AssetCodingId { get; private set; }
+    public AssetCoding AssetCoding { get; private set; }
 
-    public Guid LocationId { get; private set; }
-    public Location Location { get; private set; }
+    public Guid LocationCodingId { get; private set; }
+    public LocationCoding LocationCoding { get; private set; }
 
     public int Number { get; private set; }
 
     public string Code { get; private set; }
-
     public string? Description { get; private set; }
 
-    public bool IsDeleted { get; private set; }
-    public DateTime? DeletedAt { get; private set; }
 
-    #region Asset Tree Structure
-    private readonly List<AssetTreeStructure> _assetTreeStructureList = new();
-    public IReadOnlyCollection<AssetTreeStructure> AssetTreeStructureList => _assetTreeStructureList.AsReadOnly();
+    #region Collection
+    private readonly List<AssetTreeStructure> _assetTreeStructures = new();
+    public IReadOnlyCollection<AssetTreeStructure> AssetTreeStructures => _assetTreeStructures.AsReadOnly();
     #endregion
 
-
     public InstalledAssetCoding() { }
-
-    public InstalledAssetCoding(Guid assertCodingId, Guid locationId, int number, string code, string? description = null, string? createdBy = null)
+    public InstalledAssetCoding(Guid assetCodingId, Guid locationCodingId, string code, string description, int number = 1, string? createdBy = null)
     {
-        if (assertCodingId == null) throw new AssetDomainException("کدینگ دارایی نمی‌تواند خالی باشد.");
-        if (locationId == null) throw new AssetDomainException("مکان استقرار نمی‌تواند خالی باشد.");
+        if (assetCodingId == null) throw new AssetDomainException("کدینگ دارایی نمی‌تواند خالی باشد.");
+        if (locationCodingId == null) throw new AssetDomainException("مکان استقرار نمی‌تواند خالی باشد.");
         if (number <= 0) throw new AssetDomainException("مقدار شمارنده تجهیز مستقر باید بیشتر از صفر باشد.");
 
         Id = Guid.NewGuid();
-
-        AssertCodingId = assertCodingId;
-        LocationId = locationId;
+        AssetCodingId = assetCodingId;
+        LocationCodingId = locationCodingId;
         Number = number;
-        Description = description;
         Code = code;
-        //Code = GenerateCode(assetCoding.Code, location.Code, number);
+        Description = description;
 
         SetCreationInfo(createdBy);
     }
-
-    public void Update(Guid assertCodingId, Guid locationId, int number, string code, string? description = null, string? modifiedBy = null)
+    public void Update(Guid assetCodingId, Guid locationCodingId, string code, string description, int number = 1, string? modifyBy = null)
     {
-        if (assertCodingId == null) throw new AssetDomainException("کدینگ دارایی نمی‌تواند خالی باشد.");
-        if (locationId == null) throw new AssetDomainException("مکان استقرار نمی‌تواند خالی باشد.");
+        if (assetCodingId == null) throw new AssetDomainException("کدینگ دارایی نمی‌تواند خالی باشد.");
+        if (locationCodingId == null) throw new AssetDomainException("مکان استقرار نمی‌تواند خالی باشد.");
         if (number <= 0) throw new AssetDomainException("مقدار شمارنده تجهیز مستقر باید بیشتر از صفر باشد.");
 
         Id = Guid.NewGuid();
-
-        AssertCodingId = assertCodingId;
-        LocationId = locationId;
+        AssetCodingId = assetCodingId;
+        LocationCodingId = locationCodingId;
         Number = number;
-        Description = description;
         Code = code;
-        //Code = GenerateCode(assetCoding.Code, location.Code, number);
+        Description = description;
 
-        SetModificationInfo(modifiedBy);
+        SetCreationInfo(modifyBy);
     }
-
-    private string GenerateCode(string assetCode, string locationCode, int seq)
-    {
-        return $"{assetCode}.{locationCode}.{seq.ToString("D4")}";
-    }
-
     public void Remove(string? modifiedBy = null) => SoftDelete(modifiedBy);
-    public void Disable(string? modifiedBy = null) => Disable(modifiedBy);
-    public void Enable(string? modifiedBy = null) => Enable(modifiedBy);
-
+    public void DisableCategory(string? modifiedBy = null) => Disable(modifiedBy);
+    public void EnableCategory(string? modifiedBy = null) => Enable(modifiedBy);
 }

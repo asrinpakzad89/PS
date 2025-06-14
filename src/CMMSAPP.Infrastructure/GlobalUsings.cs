@@ -2,7 +2,6 @@
 global using CMMSAPP.Domain.AggregatesModel.AssetAggregate;
 global using CMMSAPP.Domain.AggregatesModel.AssetCategoryAggregate;
 global using CMMSAPP.Domain.AggregatesModel.AssetGroupAggregate;
-global using CMMSAPP.Domain.AggregatesModel.AssetLocationCodingAggregate;
 global using CMMSAPP.Domain.AggregatesModel.AssetTreeStructureAggregate;
 global using CMMSAPP.Domain.AggregatesModel.BreakdownAggregate;
 global using CMMSAPP.Domain.AggregatesModel.DimensionAggregate;

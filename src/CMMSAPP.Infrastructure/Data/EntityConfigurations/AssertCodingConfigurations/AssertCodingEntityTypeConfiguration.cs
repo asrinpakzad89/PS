@@ -18,7 +18,7 @@ public class AssertCodingEntityTypeConfiguration : IEntityTypeConfiguration<Asse
 
 
         builder.HasOne(x=>x.Asset)
-            .WithMany(x=>x.AssetCodingList)
+            .WithMany(x=>x.Codings)
             .HasForeignKey(x=>x.AssetId)
             .OnDelete(DeleteBehavior.Restrict);
 

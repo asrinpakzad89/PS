@@ -12,7 +12,7 @@ public class Manufacturer : Entity, IAggregateRoot
     private Manufacturer() { }
 
     public Manufacturer(string companyName, string brand, string? phone,
-                        string? address, string? email, string? country)
+                        string? address, string? email, string? country, string? createdBy = null)
     {
         if (!companyName.HasValue())
             throw new AssetDomainException("نام شرکت نمی تواند خالی باشد.");
@@ -24,10 +24,12 @@ public class Manufacturer : Entity, IAggregateRoot
         Address = address;
         Email = email;
         Country = country;
+
+        SetCreationInfo(createdBy);
     }
 
     public void Update(string companyName, string brand, string? phone,
-                       string? address, string? email, string? country)
+                       string? address, string? email, string? country, string? modifiedBy = null)
     {
         if (!companyName.HasValue())
             throw new AssetDomainException("نام شرکت نمی تواند خالی باشد.");
@@ -38,6 +40,8 @@ public class Manufacturer : Entity, IAggregateRoot
         Address = address;
         Email = email;
         Country = country;
+
+        SetModificationInfo(modifiedBy);
     }
 
     public void Remove(string? modifiedBy = null) => SoftDelete(modifiedBy);

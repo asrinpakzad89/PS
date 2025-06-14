@@ -12,22 +12,21 @@ public class Location : Entity, IAggregateRoot
     public IReadOnlyCollection<Location> Children => _children.AsReadOnly();
 
 
-    #region ReLocation
+    #region Collection
     private readonly List<AssetRelocation> _relocationFrom = new();
     public IReadOnlyCollection<AssetRelocation> RelocationFrom => _relocationFrom.AsReadOnly();
 
     private readonly List<AssetRelocation> _relocationTo = new();
-    public IReadOnlyCollection<AssetRelocation> RelocationTo => _relocationFrom.AsReadOnly();
-    #endregion
+    public IReadOnlyCollection<AssetRelocation> RelocationTo => _relocationTo.AsReadOnly();
 
-    #region Installed Asset Coding
-    private readonly List<InstalledAssetCoding> _installedAssetCodingList = new();
-    public IReadOnlyCollection<InstalledAssetCoding> InstalledAssetCodingList => _installedAssetCodingList.AsReadOnly();
+
+    private readonly List<InstalledAssetCoding> _installedAssetCodings = new();
+    public IReadOnlyCollection<InstalledAssetCoding> InstalledAssetCodings => _installedAssetCodings.AsReadOnly();
     #endregion
 
     #region Location Coding
-    private readonly List<LocationCoding> _locationCodingList = new();
-    public IReadOnlyCollection<LocationCoding> LocationCodingList => _locationCodingList.AsReadOnly();
+    private readonly List<LocationCoding> _locationCodings = new();
+    public IReadOnlyCollection<LocationCoding> LocationCodings => _locationCodings.AsReadOnly();
     #endregion
 
 

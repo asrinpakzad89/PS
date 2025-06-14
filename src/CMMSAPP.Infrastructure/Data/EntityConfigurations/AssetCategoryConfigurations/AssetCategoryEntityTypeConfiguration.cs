@@ -1,8 +1,8 @@
 ﻿namespace CMMSAPP.Infrastructure.Data.EntityConfigurations.AssetCategoryConfigurations;
 
-public class AssetCategoryEntityTypeConfiguration : IEntityTypeConfiguration<AssetCategory>
+public class AssetCategoryEntityTypeConfiguration : IEntityTypeConfiguration<Category>
 {
-    public void Configure(EntityTypeBuilder<AssetCategory> builder)
+    public void Configure(EntityTypeBuilder<Category> builder)
     {
         builder.HasKey(x => x.Id);
 
@@ -17,7 +17,7 @@ public class AssetCategoryEntityTypeConfiguration : IEntityTypeConfiguration<Ass
             .IsUnicode();
 
         builder.HasOne(x => x.AssetGroup)
-            .WithMany(x => x.AssetCategoryList)
+            .WithMany(x => x.Categories)
             .HasForeignKey(x => x.AssetGroupId);
 
 

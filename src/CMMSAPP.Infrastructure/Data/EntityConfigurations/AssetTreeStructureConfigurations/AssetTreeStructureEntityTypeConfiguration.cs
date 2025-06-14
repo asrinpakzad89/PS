@@ -9,12 +9,12 @@ public class AssetTreeStructureEntityTypeConfiguration : IEntityTypeConfiguratio
         builder.HasKey(x => x.Id);
 
         builder.HasOne(x => x.InstalledAssetCoding)
-            .WithMany(x=>x.AssetTreeStructureList)
+            .WithMany(x=>x.AssetTreeStructures)
             .HasForeignKey(x => x.InstalledAssetCodingId)
             .OnDelete(DeleteBehavior.Restrict);
 
         builder.HasOne(x => x.Level)
-            .WithMany(x=>x.AssetTreeStructureList)
+            .WithMany(x=>x.AssetTreeStructures)
             .HasForeignKey(x => x.LevelId)
             .OnDelete(DeleteBehavior.Restrict);
 

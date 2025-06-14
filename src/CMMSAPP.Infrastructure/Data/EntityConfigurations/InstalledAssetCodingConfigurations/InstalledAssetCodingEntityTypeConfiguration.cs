@@ -15,13 +15,13 @@ public class InstalledAssetCodingEntityTypeConfiguration : IEntityTypeConfigurat
          .IsRequired();
 
 
-        builder.HasOne(x => x.AssertCoding)
-            .WithMany(x=>x.InstalledAssetCodingList)
-            .HasForeignKey(x => x.AssertCodingId);
+        builder.HasOne(x => x.AssetCoding)
+            .WithMany(x=>x.InstalledAssetCodings)
+            .HasForeignKey(x => x.AssetCodingId);
 
-        builder.HasOne(x => x.Location)
-            .WithMany(x => x.InstalledAssetCodingList)
-            .HasForeignKey(x => x.LocationId);
+        builder.HasOne(x => x.LocationCoding)
+            .WithMany(x => x.InstalledAssetCodings)
+            .HasForeignKey(x => x.LocationCodingId);
 
         builder.HasQueryFilter(x => !x.IsDelete);
         builder.ToTable("InstalledAssetCodes");

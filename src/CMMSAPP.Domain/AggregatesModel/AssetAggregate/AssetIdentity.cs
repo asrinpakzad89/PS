@@ -18,10 +18,6 @@ public class AssetIdentity : Entity
     public string? FunctionalDescription { get; private set; }
 
 
-    private readonly List<Dimension>? _dimensions = new();
-    public IReadOnlyCollection<Dimension> Dimensions => _dimensions.AsReadOnly();
-
-
     public string? TechnicalSpecifications { get; private set; }
 
     protected AssetIdentity() { }
@@ -30,7 +26,7 @@ public class AssetIdentity : Entity
                          Guid manufacturerId, string? yearOfManufacture,
                          ShapeEnum? shape, MaterialTypeEnum? material, string? physicalLabel,
                          string? serialNumber, string? functionalDescription,
-                         IEnumerable<Dimension>? dimensions, string? technicalSpecifications)
+                         string? technicalSpecifications, string? createdBy = null)
     {
         if (assetId == null) 
             throw new AssetDomainException("کد تجهیز نمی‌تواند خالی باشد.");
@@ -48,16 +44,14 @@ public class AssetIdentity : Entity
         FunctionalDescription = functionalDescription;
         TechnicalSpecifications = technicalSpecifications;
         IsDisable = false;
-
-        if (dimensions != null)
-            _dimensions.AddRange(dimensions);
+        SetCreationInfo(createdBy);
     }
 
     public void Update(bool isStandard, ImportanceLevelEnum? importanceLevel,
                        Guid manufacturerId, string? yearOfManufacture,
                        ShapeEnum? shape, MaterialTypeEnum? material, string? physicalLabel,
                        string? serialNumber, string? functionalDescription,
-                       IEnumerable<Dimension>? dimensions, string? technicalSpecifications)
+                       string? technicalSpecifications, string? modifiedBy = null)
     {
         IsStandard = isStandard;
         ManufacturerId = manufacturerId;
@@ -70,9 +64,7 @@ public class AssetIdentity : Entity
         FunctionalDescription = functionalDescription;
         TechnicalSpecifications = technicalSpecifications;
 
-        _dimensions.Clear();
-        if (dimensions != null)
-            _dimensions.AddRange(dimensions);
+        SetModificationInfo(modifiedBy);
     }
 
     public void Remove(string? modifiedBy = null) => SoftDelete(modifiedBy);

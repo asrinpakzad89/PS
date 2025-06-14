@@ -2,21 +2,21 @@
 
 namespace CMMSAPP.Domain.AggregatesModel.AssetCategoryAggregate;
 
-public class AssetCategory : Entity, IAggregateRoot
+public class Category : Entity, IAggregateRoot
 {
     public string Title { get; private set; }
     public string Code { get; private set; }
     public Guid AssetGroupId { get; private set; }
-    public AssetGroup AssetGroup { get; private set; }
+    public Group AssetGroup { get; private set; }
 
-    #region Asset
-    private readonly List<Asset> _AssetList = new();
-    public IReadOnlyCollection<Asset> AssetList => _AssetList.AsReadOnly();
+    #region Collection
+    private readonly List<Asset> _assets = new();
+    public IReadOnlyCollection<Asset> Assets => _assets.AsReadOnly();
     #endregion
 
-    protected AssetCategory() { }
+    protected Category() { }
 
-    public AssetCategory(string name, string code, Guid groupId, string? createdBy = null)
+    public Category(string name, string code, Guid groupId, string? createdBy = null)
     {
         if (!name.HasValue())
             throw new AssetDomainException("عنوان دسته نمی‌تواند خالی باشد.");

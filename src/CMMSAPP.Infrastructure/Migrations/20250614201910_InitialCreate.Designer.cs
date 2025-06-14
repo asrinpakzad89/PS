@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CMMSAPP.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20250614095843_InitialCreate")]
+    [Migration("20250614201910_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -323,7 +323,7 @@ namespace CMMSAPP.Infrastructure.Migrations
                     b.ToTable("AssetStatus", (string)null);
                 });
 
-            modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetCategoryAggregate.AssetCategory", b =>
+            modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetCategoryAggregate.Category", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -369,7 +369,7 @@ namespace CMMSAPP.Infrastructure.Migrations
                     b.ToTable("AssetCategories", (string)null);
                 });
 
-            modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetGroupAggregate.AssetGroup", b =>
+            modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetGroupAggregate.Group", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -402,57 +402,6 @@ namespace CMMSAPP.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AssetGroups", (string)null);
-                });
-
-            modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetLocationCodingAggregate.AssetLocationCoding", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("AssetId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .IsUnicode(true)
-                        .HasColumnType("character varying(200)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("text");
-
-                    b.Property<bool>("IsDelete")
-                        .HasColumnType("boolean");
-
-                    b.Property<bool>("IsDisable")
-                        .HasColumnType("boolean");
-
-                    b.Property<Guid>("LocationCodingId")
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime?>("ModifiedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("ModifiedBy")
-                        .HasColumnType("text");
-
-                    b.Property<int>("Number")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AssetId");
-
-                    b.HasIndex("LocationCodingId");
-
-                    b.ToTable("AssetLocationCodings", (string)null);
                 });
 
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetTreeStructureAggregate.AssetTreeStructure", b =>
@@ -544,9 +493,6 @@ namespace CMMSAPP.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("AssetIdentityId")
-                        .HasColumnType("uuid");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
@@ -577,8 +523,6 @@ namespace CMMSAPP.Infrastructure.Migrations
                         .HasColumnType("character varying(50)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AssetIdentityId");
 
                     b.ToTable("Dimensions", (string)null);
                 });
@@ -655,7 +599,10 @@ namespace CMMSAPP.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("AssertCodingId")
+                    b.Property<Guid>("AssetCodingId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("AssetId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Code")
@@ -670,22 +617,19 @@ namespace CMMSAPP.Infrastructure.Migrations
                     b.Property<string>("CreatedBy")
                         .HasColumnType("text");
 
-                    b.Property<DateTime?>("DeletedAt")
-                        .HasColumnType("timestamp with time zone");
-
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
                     b.Property<bool>("IsDelete")
                         .HasColumnType("boolean");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("boolean");
-
                     b.Property<bool>("IsDisable")
                         .HasColumnType("boolean");
 
-                    b.Property<Guid>("LocationId")
+                    b.Property<Guid>("LocationCodingId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("LocationId")
                         .HasColumnType("uuid");
 
                     b.Property<DateTime?>("ModifiedAt")
@@ -699,7 +643,11 @@ namespace CMMSAPP.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AssertCodingId");
+                    b.HasIndex("AssetCodingId");
+
+                    b.HasIndex("AssetId");
+
+                    b.HasIndex("LocationCodingId");
 
                     b.HasIndex("LocationId");
 
@@ -1085,7 +1033,7 @@ namespace CMMSAPP.Infrastructure.Migrations
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssertCodingAggregate.AssetCoding", b =>
                 {
                     b.HasOne("CMMSAPP.Domain.AggregatesModel.AssetAggregate.Asset", "Asset")
-                        .WithMany("AssetCodingList")
+                        .WithMany("Codings")
                         .HasForeignKey("AssetId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -1101,8 +1049,8 @@ namespace CMMSAPP.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("CMMSAPP.Domain.AggregatesModel.AssetCategoryAggregate.AssetCategory", "AssetCategory")
-                        .WithMany("AssetList")
+                    b.HasOne("CMMSAPP.Domain.AggregatesModel.AssetCategoryAggregate.Category", "AssetCategory")
+                        .WithMany("Assets")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1122,13 +1070,13 @@ namespace CMMSAPP.Infrastructure.Migrations
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetAggregate.AssetDimension", b =>
                 {
                     b.HasOne("CMMSAPP.Domain.AggregatesModel.AssetAggregate.Asset", "Asset")
-                        .WithMany("DimensionList")
+                        .WithMany("Dimensions")
                         .HasForeignKey("AssetId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("CMMSAPP.Domain.AggregatesModel.DimensionAggregate.Dimension", "Dimension")
-                        .WithMany("AssetDimensionsList")
+                        .WithMany("AssetDimensions")
                         .HasForeignKey("DimensionId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -1187,10 +1135,10 @@ namespace CMMSAPP.Infrastructure.Migrations
                     b.Navigation("Asset");
                 });
 
-            modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetCategoryAggregate.AssetCategory", b =>
+            modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetCategoryAggregate.Category", b =>
                 {
-                    b.HasOne("CMMSAPP.Domain.AggregatesModel.AssetGroupAggregate.AssetGroup", "AssetGroup")
-                        .WithMany("AssetCategoryList")
+                    b.HasOne("CMMSAPP.Domain.AggregatesModel.AssetGroupAggregate.Group", "AssetGroup")
+                        .WithMany("Categories")
                         .HasForeignKey("AssetGroupId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -1198,35 +1146,16 @@ namespace CMMSAPP.Infrastructure.Migrations
                     b.Navigation("AssetGroup");
                 });
 
-            modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetLocationCodingAggregate.AssetLocationCoding", b =>
-                {
-                    b.HasOne("CMMSAPP.Domain.AggregatesModel.AssetAggregate.Asset", "Asset")
-                        .WithMany("AssetocationCodingList")
-                        .HasForeignKey("AssetId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("CMMSAPP.Domain.AggregatesModel.LocationCodingAggregate.LocationCoding", "LocationCoding")
-                        .WithMany("AssetocationCodingList")
-                        .HasForeignKey("LocationCodingId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Asset");
-
-                    b.Navigation("LocationCoding");
-                });
-
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetTreeStructureAggregate.AssetTreeStructure", b =>
                 {
                     b.HasOne("CMMSAPP.Domain.AggregatesModel.InstalledAssetCodingAggregate.InstalledAssetCoding", "InstalledAssetCoding")
-                        .WithMany("AssetTreeStructureList")
+                        .WithMany("AssetTreeStructures")
                         .HasForeignKey("InstalledAssetCodingId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("CMMSAPP.Domain.AggregatesModel.LevelAggregate.Level", "Level")
-                        .WithMany("AssetTreeStructureList")
+                        .WithMany("AssetTreeStructures")
                         .HasForeignKey("LevelId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -1236,45 +1165,46 @@ namespace CMMSAPP.Infrastructure.Migrations
                     b.Navigation("Level");
                 });
 
-            modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.DimensionAggregate.Dimension", b =>
-                {
-                    b.HasOne("CMMSAPP.Domain.AggregatesModel.AssetAggregate.AssetIdentity", null)
-                        .WithMany("Dimensions")
-                        .HasForeignKey("AssetIdentityId");
-                });
-
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.FileResourceAggregate.FileResource", b =>
                 {
                     b.HasOne("CMMSAPP.Domain.AggregatesModel.AssetAggregate.Asset", null)
-                        .WithMany("FileList")
+                        .WithMany("Files")
                         .HasForeignKey("AssetId");
 
                     b.HasOne("CMMSAPP.Domain.AggregatesModel.MaterialAggregate.Material", null)
-                        .WithMany("FileList")
+                        .WithMany("Files")
                         .HasForeignKey("MaterialId");
 
                     b.HasOne("CMMSAPP.Domain.AggregatesModel.StandardPartsAggregate.StandardPart", null)
-                        .WithMany("FileList")
+                        .WithMany("Files")
                         .HasForeignKey("StandardPartId");
                 });
 
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.InstalledAssetCodingAggregate.InstalledAssetCoding", b =>
                 {
-                    b.HasOne("CMMSAPP.Domain.AggregatesModel.AssertCodingAggregate.AssetCoding", "AssertCoding")
-                        .WithMany("InstalledAssetCodingList")
-                        .HasForeignKey("AssertCodingId")
+                    b.HasOne("CMMSAPP.Domain.AggregatesModel.AssertCodingAggregate.AssetCoding", "AssetCoding")
+                        .WithMany("InstalledAssetCodings")
+                        .HasForeignKey("AssetCodingId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CMMSAPP.Domain.AggregatesModel.LocationAggregate.Location", "Location")
-                        .WithMany("InstalledAssetCodingList")
-                        .HasForeignKey("LocationId")
+                    b.HasOne("CMMSAPP.Domain.AggregatesModel.AssetAggregate.Asset", null)
+                        .WithMany("InstalledlocationCodings")
+                        .HasForeignKey("AssetId");
+
+                    b.HasOne("CMMSAPP.Domain.AggregatesModel.LocationCodingAggregate.LocationCoding", "LocationCoding")
+                        .WithMany("InstalledAssetCodings")
+                        .HasForeignKey("LocationCodingId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("AssertCoding");
+                    b.HasOne("CMMSAPP.Domain.AggregatesModel.LocationAggregate.Location", null)
+                        .WithMany("InstalledAssetCodings")
+                        .HasForeignKey("LocationId");
 
-                    b.Navigation("Location");
+                    b.Navigation("AssetCoding");
+
+                    b.Navigation("LocationCoding");
                 });
 
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.LevelAggregate.Level", b =>
@@ -1300,7 +1230,7 @@ namespace CMMSAPP.Infrastructure.Migrations
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.LocationCodingAggregate.LocationCoding", b =>
                 {
                     b.HasOne("CMMSAPP.Domain.AggregatesModel.LocationAggregate.Location", "Location")
-                        .WithMany("LocationCodingList")
+                        .WithMany("LocationCodings")
                         .HasForeignKey("LocationId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -1310,54 +1240,49 @@ namespace CMMSAPP.Infrastructure.Migrations
 
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssertCodingAggregate.AssetCoding", b =>
                 {
-                    b.Navigation("InstalledAssetCodingList");
+                    b.Navigation("InstalledAssetCodings");
                 });
 
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetAggregate.Asset", b =>
                 {
-                    b.Navigation("AssetCodingList");
-
-                    b.Navigation("AssetocationCodingList");
-
                     b.Navigation("Children");
 
-                    b.Navigation("DimensionList");
+                    b.Navigation("Codings");
 
-                    b.Navigation("FileList");
+                    b.Navigation("Dimensions");
+
+                    b.Navigation("Files");
+
+                    b.Navigation("InstalledlocationCodings");
 
                     b.Navigation("LocationHistory");
 
                     b.Navigation("StatusHistory");
                 });
 
-            modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetAggregate.AssetIdentity", b =>
+            modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetCategoryAggregate.Category", b =>
                 {
-                    b.Navigation("Dimensions");
+                    b.Navigation("Assets");
                 });
 
-            modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetCategoryAggregate.AssetCategory", b =>
+            modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetGroupAggregate.Group", b =>
                 {
-                    b.Navigation("AssetList");
-                });
-
-            modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.AssetGroupAggregate.AssetGroup", b =>
-                {
-                    b.Navigation("AssetCategoryList");
+                    b.Navigation("Categories");
                 });
 
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.DimensionAggregate.Dimension", b =>
                 {
-                    b.Navigation("AssetDimensionsList");
+                    b.Navigation("AssetDimensions");
                 });
 
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.InstalledAssetCodingAggregate.InstalledAssetCoding", b =>
                 {
-                    b.Navigation("AssetTreeStructureList");
+                    b.Navigation("AssetTreeStructures");
                 });
 
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.LevelAggregate.Level", b =>
                 {
-                    b.Navigation("AssetTreeStructureList");
+                    b.Navigation("AssetTreeStructures");
 
                     b.Navigation("Children");
                 });
@@ -1366,9 +1291,9 @@ namespace CMMSAPP.Infrastructure.Migrations
                 {
                     b.Navigation("Children");
 
-                    b.Navigation("InstalledAssetCodingList");
+                    b.Navigation("InstalledAssetCodings");
 
-                    b.Navigation("LocationCodingList");
+                    b.Navigation("LocationCodings");
 
                     b.Navigation("RelocationFrom");
 
@@ -1377,17 +1302,17 @@ namespace CMMSAPP.Infrastructure.Migrations
 
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.LocationCodingAggregate.LocationCoding", b =>
                 {
-                    b.Navigation("AssetocationCodingList");
+                    b.Navigation("InstalledAssetCodings");
                 });
 
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.MaterialAggregate.Material", b =>
                 {
-                    b.Navigation("FileList");
+                    b.Navigation("Files");
                 });
 
             modelBuilder.Entity("CMMSAPP.Domain.AggregatesModel.StandardPartsAggregate.StandardPart", b =>
                 {
-                    b.Navigation("FileList");
+                    b.Navigation("Files");
                 });
 #pragma warning restore 612, 618
         }

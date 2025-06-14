@@ -10,7 +10,6 @@ public class AssetIdentityEntityTypeConfiguration : IEntityTypeConfiguration<Ass
             .WithMany()
             .HasForeignKey(x => x.ManufacturerId);
 
-
         builder.HasQueryFilter(x => !x.IsDelete);
         builder.ToTable("AssetIdentities");
     }

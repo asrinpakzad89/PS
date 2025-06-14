@@ -10,12 +10,12 @@ public class AssetDimensionEntityTypeConfiguration : IEntityTypeConfiguration<As
         .IsRequired();
 
         builder.HasOne(x => x.Asset)
-        .WithMany(x=>x.DimensionList)
+        .WithMany(x=>x.Dimensions)
         .HasForeignKey(x => x.AssetId)
         .OnDelete(DeleteBehavior.Restrict);
 
         builder.HasOne(x => x.Dimension)
-        .WithMany(x=>x.AssetDimensionsList)
+        .WithMany(x=>x.AssetDimensions)
         .HasForeignKey(x => x.DimensionId)
         .OnDelete(DeleteBehavior.Restrict);
 

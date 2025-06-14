@@ -15,9 +15,9 @@ public class Level : Entity, IAggregateRoot
 
     public string? Description { get; private set; }
 
-    #region Asset Tree Structure
-    private readonly List<AssetTreeStructure> _assetTreeStructureList = new();
-    public IReadOnlyCollection<AssetTreeStructure> AssetTreeStructureList => _assetTreeStructureList.AsReadOnly();
+    #region Collection
+    private readonly List<AssetTreeStructure> _assetTreeStructures = new();
+    public IReadOnlyCollection<AssetTreeStructure> AssetTreeStructures => _assetTreeStructures.AsReadOnly();
     #endregion
 
 

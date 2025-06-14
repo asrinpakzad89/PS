@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CMMSAPP.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a484eb3781a28667e8dc71b56a1929b41a74e91d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84088024fb68711f7cf12dc3641c3b25478084ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("CMMSAPP.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CMMSAPP.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

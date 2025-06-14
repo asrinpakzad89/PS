@@ -15,7 +15,7 @@ public class DimensionEntityTypeConfiguration : IEntityTypeConfiguration<Dimensi
          .IsRequired()
          .HasMaxLength(50);
 
-        builder.HasMany(x=>x.AssetDimensionsList)
+        builder.HasMany(x=>x.AssetDimensions)
             .WithOne(x=>x.Dimension)
             .HasForeignKey(x=>x.DimensionId)
             .OnDelete(DeleteBehavior.Restrict);

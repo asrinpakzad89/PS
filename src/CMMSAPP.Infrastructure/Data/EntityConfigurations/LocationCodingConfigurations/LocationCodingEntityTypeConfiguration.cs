@@ -12,7 +12,7 @@ public class LocationCodingEntityTypeConfiguration : IEntityTypeConfiguration<Lo
         .IsUnicode();
 
         builder.HasOne(x => x.Location)
-        .WithMany(x=>x.LocationCodingList)
+        .WithMany(x=>x.LocationCodings)
         .HasForeignKey(x => x.LocationId)
         .OnDelete(DeleteBehavior.Restrict);
 

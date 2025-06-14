@@ -4,10 +4,12 @@ public class Dimension : Entity, IAggregateRoot
     public string Title { get; private set; }
     public string Unit { get; private set; }
 
-    #region AssetDimensions
-    private readonly List<AssetDimension> _AssetDimensionsList = new();
-    public IReadOnlyCollection<AssetDimension> AssetDimensionsList => _AssetDimensionsList.AsReadOnly();
+
+    #region Collection
+    private readonly List<AssetDimension> _assetDimensions = new();
+    public IReadOnlyCollection<AssetDimension> AssetDimensions => _assetDimensions.AsReadOnly();
     #endregion
+    
     protected Dimension() { }
 
     public Dimension(string title, string unit)

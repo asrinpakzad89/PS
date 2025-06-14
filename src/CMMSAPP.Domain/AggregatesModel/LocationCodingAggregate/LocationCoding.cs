@@ -1,7 +1,4 @@
-﻿using CMMSAPP.Domain.AggregatesModel.AssetLocationCodingAggregate;
-using CMMSAPP.Domain.AggregatesModel.LocationAggregate;
-
-namespace CMMSAPP.Domain.AggregatesModel.LocationCodingAggregate;
+﻿namespace CMMSAPP.Domain.AggregatesModel.LocationCodingAggregate;
 
 public class LocationCoding : Entity, IAggregateRoot
 {
@@ -11,9 +8,9 @@ public class LocationCoding : Entity, IAggregateRoot
     public string Code { get; set; }
 
 
-    #region Location Coding
-    private readonly List<AssetLocationCoding> _AssetlocationCodingList = new();
-    public IReadOnlyCollection<AssetLocationCoding> AssetocationCodingList => _AssetlocationCodingList.AsReadOnly();
+    #region Collection
+    private readonly List<InstalledAssetCoding> _installedAssetCodings = new();
+    public IReadOnlyCollection<InstalledAssetCoding> InstalledAssetCodings => _installedAssetCodings.AsReadOnly();
     #endregion
 
 
@@ -23,7 +20,7 @@ public class LocationCoding : Entity, IAggregateRoot
     {
         if (LocationId == null)
             throw new AssetDomainException("مکان مورد نظر را انتخاب نمایید.");
-       
+
         if (!code.HasValue())
             throw new AssetDomainException("کد محل استقرار را وارد نمایید.");
 

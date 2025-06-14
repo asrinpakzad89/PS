@@ -8,10 +8,9 @@ public class ApplicationDBContext : DbContext, IUnitOfWork
     public DbSet<AssetIdentity> AssetIdentities { get; set; }
     public DbSet<AssetRelocation> AssetRelocations { get; set; }
     public DbSet<AssetStatus> AssetStatuses { get; set; }
-    public DbSet<AssetCategory> AssetCategories { get; set; }
+    public DbSet<Category> AssetCategories { get; set; }
     public DbSet<AssetCoding> AssetCodings { get; set; }
-    public DbSet<AssetGroup> AssetGroups { get; set; }
-    public DbSet<AssetLocationCoding> AssetLocationCodings { get; set; }
+    public DbSet<Group> AssetGroups { get; set; }
     public DbSet<AssetTreeStructure> AssetTreeStructures { get; set; }
     public DbSet<Breakdown> Breakdowns { get; set; }
     public DbSet<Dimension> Dimensions { get; set; }

@@ -1,17 +1,17 @@
 ﻿namespace CMMSAPP.Domain.AggregatesModel.AssetGroupAggregate;
 
-public class AssetGroup : Entity, IAggregateRoot
+public class Group : Entity, IAggregateRoot
 {
     public string Title { get; private set; }
 
-    #region Asset Category
-    private readonly List<AssetCategory> _AssetCategoryList = new();
-    public IReadOnlyCollection<AssetCategory> AssetCategoryList => _AssetCategoryList.AsReadOnly();
+    #region Collection
+    private readonly List<Category> _categories = new();
+    public IReadOnlyCollection<Category> Categories => _categories.AsReadOnly();
     #endregion
 
-    protected AssetGroup() { }
+    protected Group() { }
 
-    public AssetGroup(string title, string? createdBy = null)
+    public Group(string title, string? createdBy = null)
     {
         if (!title.HasValue())
             throw new AssetDomainException("عنوان گروه نمی‌تواند خالی باشد. لطفاً یک عنوان معتبر وارد کنید.");

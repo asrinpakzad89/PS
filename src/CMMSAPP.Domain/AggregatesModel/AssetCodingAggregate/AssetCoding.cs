@@ -10,9 +10,10 @@ public class AssetCoding : Entity, IAggregateRoot
 
     public string Code { get; private set; }
 
-    #region Installed Asset Coding
-    private readonly List<InstalledAssetCoding> _installedAssetCodingList = new();
-    public IReadOnlyCollection<InstalledAssetCoding> InstalledAssetCodingList => _installedAssetCodingList.AsReadOnly();
+
+    #region Collection
+    private readonly List<InstalledAssetCoding> _installedAssetCodings = new();
+    public IReadOnlyCollection<InstalledAssetCoding> InstalledAssetCodings => _installedAssetCodings.AsReadOnly();
     #endregion
 
     public AssetCoding() { }

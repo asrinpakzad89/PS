@@ -21,7 +21,7 @@ public class EquipmentEntityTypeConfiguration : IEntityTypeConfiguration<Asset>
 
 
         builder.HasOne(x => x.AssetCategory)
-        .WithMany(x=>x.AssetList)
+        .WithMany(x=>x.Assets)
         .HasForeignKey(x => x.CategoryId);
 
         builder.HasOne(x => x.Parent)
@@ -33,7 +33,6 @@ public class EquipmentEntityTypeConfiguration : IEntityTypeConfiguration<Asset>
         .WithMany()
         .HasForeignKey(x => x.AssetIdentityId)
         .OnDelete(DeleteBehavior.Restrict);
-
 
         builder.HasQueryFilter(x => !x.IsDelete);
         builder.ToTable("Assets");
